@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="shortcut icon" href="images/fav-icon.png/">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(#2b1055, #7597de);
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    
+}
+header .logo img
+{
+  width: 200px;
+  height: 50px;
+  mix-blend-mode: screen;
+}
+header ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active {
+  background:#fff;
+  color: #2b1055;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #1c0522, transparent);
+  z-index: 1000; 
+}
+
+ section img {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+ }
+ section img#moon {
+  mix-blend-mode: screen;
+
+ }
+ section img#front {
+  z-index: 10;
+ }
+ #text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 9;
+  -webkit-text-stroke: 0.5px #2b1055;
+ }
+ #btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color:#2b1055;
+  font-size: 1.5em;
+  z-index: 9;
+  transform: translateY(100px);
+ }
+ .sec {
+  position: relative;
+  padding: 100px;
+  background: #1c0522;
+  
+ }
+  h2 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: #fff;
+ }
+ .sec p {
+  font-size: 1.2em;
+  color: #fff;
+ }
+ 
+
+
+ select {
+    padding: 6px 15px;
+    font-size: 15px;
+    border-radius: 20px;
+  }
+  
+    select:hover {
+    background-color: #2b1055;
+    color: #fff;
+  }
+.sec2 {
+  position: relative;
+  background: #1c0522;
+  display: flex;
+  justify-content: space-evenly;
+ }
+ .sec2 h2 {
+  font-size: 3em;
+  color: #fff;
+  padding-left: 10px;
+ }
+ .bus-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    width: 200px;
+    border-radius: 10px; 
+    margin-left: 85px;
+}
+
+.bus-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.bus-container h4 {
+    margin: 10px 0;
+    color: #fff;
+}
+.bus-container p {
+    margin: 1px 0;
+    color: #fff;
+    font-size: 0.7em;
+  }
+
+.bus-container button {
+  background-color: #fff;
+  color: #2b1055;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.bus-container button:hover {
+  background-color: #2b1055;
+  color: #fff;
+}
+.testimonials-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.testimonials-box{
+width:450px;
+box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+background-color:#ffffff;
+padding: 20px;
+margin: 15px;
+cursor: pointer;
+}
+.profile-img {
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.profile-img img{
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    object-position: center;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.name-user{
+    display: flex;
+    flex-direction: column;
+}
+.name-user strong{ 
+    color: #2b1055;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+.name-user span{
+    color:#2b1055;
+    font-size: 0.8rem;
+}
+.reviews{ 
+    color:#f9d71c;
+}
+.box-top{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;}
+.client-comment p{
+    font-size: 0.9rem;
+    color:#2b1055;
+}
+.testimonials-box:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+@media (max-width:1060px){
+    .testimonials-box{ 
+        width: 45%;
+        padding: 10px;
+    }}
+@media(max-width:790px){
+    .testimonials-box{ 
+        width: 100%;
+    }
+    .testimonials-heading h1{
+        font-size: 1.4rem;
+    }}
+    @media(max-width:340px){
+        .box-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        }
+        .reviews{
+            margin-top: 10px;
+    }}
+footer {
+   background-color: #2b1055;
+    padding: 20px;
+    
+}
+.footer h3{
+    color: white;
+    text-align: center;
+}
+.partners img {
+    border-radius: 10px;
+    width: 350px; 
+    margin: 0 15px; 
+}
+hr {
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    
+}
+.links {
+    background-color:none;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sect {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.sect h4 {
+    color: white;
+}
+
+.sect ul li {
+    color: white;
+    list-style: none;
+    background-color:none;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer a {
+    color: white;
+    margin-right: 10px;
+    font-size: 18px;
+    text-decoration: none;
+}
+.address {
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+ 
+    </style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="../Images/b2dfcb3b-6769-4420-b181-1df86daa8c1c__1_-removebg-preview.png" alt="Logo">
+  </div>
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="reserveVehicles.html">Reserve Vehicles</a></li>
+        <li><a href="Reviews.html">Rewiews</a></li>
+        <li><a href="Aboutus.html">About</a></li>
+        <li><a href="Contact.html">contact</a></li>
+        <li><a href="displayReserve.html">Display Reserve</a></li>
+    </ul>
+    <div class="select-container">
+        <select id="loginStatus">
+        <option value="">Accounts</option>
+        <option value="create">Create New</option>
+        <option value="logout">LogOut</option>
+      </select>
+    </div>
+</header>
+<section>
+    <img src="../Images/stars.png" id="stars">
+    <img src="../Images/moon.png" id="moon">
+    <img src="../Images/e669e1aa-f9fd-478b-85d3-6119f883cb84-removebg.png" id="Mountains">
+    <h2 id="text">Hamro Bato</h2>
+    <a href="#sec2" id="btn">Reserve Your Ticket</a>
+    
+</section>
+<div class="sec" id="sec">
+    <h2>Hamro Bato</h2>
+    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing 
+        elit. Aenean commodo ligula eget dolor. Aenean massa. 
+        Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus. Donec quam felis, 
+        ultricies nec, pellentesque eu, pretium quis, sem. 
+        Nulla consequat massa quis enim. Donec pede justo,
+        fringilla vel, aliquet nec, vulputate eget, arcu.
+         </p>
+         <br><br><br><br>
+         <h2>Reserve Your Ticket</h2>
+         <div class="sec2" id="sec2">
+          <div class="bus-container">
+            <img src="../Images/figma bus.png" alt="Bus Model 1">
+            <h4>Bus 1</h4>
+            <hr>
+            <p>1/34 Seats</p>
+            <div>
+              <button onclick="Reserve()" id="ReserveButton">Reserve Now</button>
+            </div>
+        </div>
+        <div class="bus-container">
+          <img src="../Images/Figma 2.jpeg" alt="Bus Model 2">
+          <h4>Bus 2</h4>
+          <hr>
+          <p>3/34 Seats</p>
+          <div>
+            <button onclick="Reserve()" id="ReserveButton2">Reserve Now</button>
+          </div>
+        </div>
+        <div class="bus-container">
+          <img src="../Images/Figma 3.jpeg" alt="Bus Model 3">
+          <h4>Bus 3</h4>
+          <hr>
+          <p>4/34 Seats</p>
+          <div>
+            <button onclick="Reserve()" id="ReserveButton3">Reserve Now</button>
+          </div>
+        </div>
+        </div>
+        <br><br><br><br>
+        <h2>Reviews</h2>
+      <div class="testimonials-box-container">
+        <!--Box1-->
+        <div class="testimonials-box">
+          <div class ="box-top">
+              <div class="profile">
+                  <div class="profile-img">
+                      <img src="../Images/345234388_950260849495085_7658881398988475432_n.jpg" />
+                  </div>
+                  <div class="name-user">
+                      <strong>David Guragain</strong>
+                      <span>@guragaindavidweb</span>
+                  </div>
+              </div>
+              <div class="reviews">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+              </div>
+          </div>
+          <div class="client-comment">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+                  elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                  Cum sociis natoque penatibus et magnis dis parturient.
+                   </p>
+          </div>
+      </div>
+      <!--Box2-->
+      <div class="testimonials-box">
+          <div class ="box-top">
+              <div class="profile">
+                  <div class="profile-img">
+                      <img src="../Images/275b2d5b-24c4-4853-829d-790e262d2db4.jpeg" />
+                  </div>
+                  <div class="name-user">
+                      <strong>Aarju Shrestha</strong>
+                      <span>@aarjushresthaweb</span>
+                  </div>
+              </div>
+              <div class="reviews">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+              </div>
+          </div>
+          <div class="client-comment">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+                  elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                  Cum sociis natoque penatibus et magnis dis parturient.
+                   </p>
+          </div>
+      </div>
+      <!--Box3-->
+      <div class="testimonials-box">
+          <div class ="box-top">
+              <div class="profile">
+                  <div class="profile-img">
+                      <img src="../Images/8b5e57c9-c2f7-40cb-b207-941c5fc7928b.jpeg" />
+                  </div>
+                  <div class="name-user">
+                      <strong>Anjal Rai</strong>
+                      <span>@anjalraiweb</span>
+                  </div>
+              </div>
+              <div class="reviews">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+              </div>
+          </div>
+          <div class="client-comment">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+                  elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                  Cum sociis natoque penatibus et magnis dis parturient.
+                   </p>
+          </div>
+      </div>
+      <!--Box4-->
+      <div class="testimonials-box">
+          <div class ="box-top">
+              <div class="profile">
+                  <div class="profile-img">
+                      <img src="../Images/a52fde69-2e11-42e6-a308-e90d41b14c54.jpeg" />
+                  </div>
+                  <div class="name-user">
+                      <strong>Alish Ban</strong>
+                      <span>@alishbanweb</span>
+                  </div>
+              </div>
+              <div class="reviews">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+              </div>
+          </div>
+          <div class="client-comment">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+                  elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                  Cum sociis natoque penatibus et magnis dis parturient.
+                   </p>
+          </div>
+      </div>
+    </div>
+  </div>
+    <footer>
+        <div class="footer">
+            <div class="partners">
+                <div class="line"></div>
+                <hr>
+                <h3>ASSOCIATED WITH</h3>
+                <br>
+                <img src="../Images/6df02b7c-6392-4ef7-9d35-6b15d88c767c.jpeg" alt="NIC ASIA">
+                <img src="../Images/Khalti_Digital_Wallet_Logo.png.jpg" alt="Khalti">
+                <img src="../Images/esewa_og.webp" alt="eSewa">
+                <hr>
+            </div>
+            <div class="links">
+                <div class="sect">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li>About</li>
+                        <li>Review</li>
+                        <li>Why Us</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+        
+                <div class="sect">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li>Reserve Vehicle</li>
+                        <li>Tour</li>
+                    </ul>
+                </div>
+                <div class="sect">
+                    <h4>Top Routes</h4>
+                    <ul>
+                        <li>Ithari - Kathmandu</li>
+                        <li>Ithari - Biratnagar</li>
+                    </ul>
+                </div>
+        </div>
+        <hr>
+        <p class="address">2024||www.hamraboto.com.np</p>
+    </footer>
+<script>
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let Mountains = document.getElementById('Mountains');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        Mountains.style.top = value * 0.05 + 'px';
+        text.style.marginRight=value * 4 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.top = value * 0.5 + 'px';
+    });
+    document.getElementById("loginStatus").addEventListener("change", function() {
+              var loginStatus = this.value;
+              if (loginStatus === "create") {
+              // Redirect to the sign-in page
+          window.location.href = "Register.html"; // Change "signin.html" to the actual URL of your sign-in page
+              } else if (loginStatus === "logout") {
+              // Redirect to the login page
+          window.location.href = "login.html"; // Change "login.html" to the actual URL of your login page
+              }
+              });
+        document.getElementById("ReserveButton").onclick = function () {
+          location.href = "reserveVehicles.html";
+        };
+        document.getElementById("ReserveButton2").onclick = function () {
+          location.href = "reserveVehicles.html";
+        };
+        document.getElementById("ReserveButton3").onclick = function () {
+          location.href = "reserveVehicles.html";
+        };
+
+
+</script>
+</body>
+</html>

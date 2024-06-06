@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <title>Login Form</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background: linear-gradient(#2b1055, #7597de);
+        }
+        .container {
+         max-width: 1000px;
+        margin: 50px auto;
+        padding: 40px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+        .logo {
+        text-align: center;
+        margin-bottom: 10px;
+            }
+
+        .logo img {
+        width: 500px;
+        height: 100px;
+            }
+        
+        .container h2 {
+            font-size:bold ;
+            color:#2b1055;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container input[type="email"],
+        .container input[type="password"],
+        .container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .container input[type="submit"] {
+            text-decoration: none;
+        display: inline-block;
+        font-size: 30px;
+        width: 50%;
+        background-color:  #2b1055;
+        color: #fff;
+        padding: 10px;
+        margin-left: 270px;
+        border: 2px solid #ccc;;
+        border-radius: 10px;
+        cursor: pointer;
+        }
+        .container input[type="submit"]:hover {
+            background-color: #5a3f84;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo">
+        <img src="../Images/e880bbfd-1b48-4688-a36d-4b170cc66fb3.jpeg" alt="Logo">
+    </div>
+    <h2>Login Form</h2>
+    <form  method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <input type="submit" value="Login" id="btn">
+    </form>
+    <div style="text-align: center;">
+        <h8>New to HamroBato?<a href="./Register.html">Register</a></h8>
+    </div>
+</div>
+
+
+<script src="../login.js"></script>
+</body>
+</html>

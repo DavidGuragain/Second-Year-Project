@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(#2b1055, #7597de);
+
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    
+}
+header .logo img
+{
+  width: 200px;
+  height: 50px;
+  mix-blend-mode: screen;
+}
+header ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active {
+  background:#fff;
+  color: #2b1055;
+}
+select {
+    padding: 6px 15px;
+    font-size: 15px;
+    border-radius: 20px;
+  }
+    
+    select:hover {
+      background-color: #2b1055;
+      color: #fff;
+    }
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 65px auto;
+}
+.david-content{
+    flex: 1;
+    width: 600px;
+    margin: 0px 25px;
+    animation: fadeInUp 2s ease;
+}
+.david-content h2{
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #fff;
+    margin-top: 40px;
+}
+.david-content p {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    color: #fff;
+}
+.david-content button{
+    background-color: #fff;
+  color: #2b1055;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 6px 15px;
+  border-radius: 20px;
+}
+.david-content button:hover{
+    background-color: #2b1055;
+    color: #fff;
+    transition: scale(1.1);
+}
+.david-image{
+    flex:1;
+    width: 600px;
+    margin: auto;
+    animation: fadeInRight 2s ease;
+}
+img {
+width: 110%;
+height: auto;
+border-radius: 10px;
+}
+h3{
+    color: #fff;
+    margin: auto;
+    animation: fadeInRight 2s ease;
+}
+@media  screen and (max-width:768px) {
+    h1{
+        font-size: 45px;
+        margin-top: 30px;
+    }
+    .david{
+        margin: 0px;
+    }
+    .container{
+        width: 100%;
+        flex-direction: column;
+        margin: 0px;
+        padding:0px 40px;
+    }
+    .david-content{
+        width: 100px;
+        margin: 35px 0px;
+    }
+    .david-content h2{
+        font-size: 30px;
+    }
+    .david-content p{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .david-content button{
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    .david-image{
+        width: 100%;
+    }
+}
+@keyframes fadeInUp{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(0px);
+    }
+}
+    @keyframes fadeInRight{
+        0%{
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+}
+
+footer {
+   background-color: none;
+    padding: 20px;
+    
+}
+.footer h3{
+    color: white;
+    text-align: center;
+}
+.partners img {
+    border-radius: 10px;
+    width: 350px; /* Adjust logo size */
+    margin: 0 15px; /* Add spacing between logos */
+}
+hr {
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    
+}
+.links {
+    background-color:none;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sec {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.sec h4 {
+    color: white;
+}
+
+.sec ul li {
+    color: white;
+    list-style: none;
+    background-color:none;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer a {
+    color: white;
+    margin-right: 10px;
+    font-size: 18px;
+    text-decoration: none;
+}
+.address {
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+}

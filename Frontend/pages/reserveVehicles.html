@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="shortcut icon" href="images/fav-icon.png/">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(#2b1055, #7597de);
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10000;
+
+    }
+
+    header .logo img {
+      width: 200px;
+      height: 50px;
+      mix-blend-mode: screen;
+    }
+
+    header ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header ul li {
+      list-style: none;
+      margin-left: 20px;
+    }
+
+    header ul li a {
+      text-decoration: none;
+      padding: 6px 15px;
+      color: #fff;
+      border-radius: 20px;
+    }
+
+    header ul li a:hover,
+    header ul li a.active {
+      background: #fff;
+      color: #2b1055;
+    }
+
+    select {
+      padding: 6px 15px;
+      font-size: 15px;
+      border-radius: 20px;
+    }
+
+    select:hover {
+      background-color: #2b1055;
+      color: #fff;
+    }
+
+    .david-content h2 {
+      margin-left: 60px;
+      margin-bottom: 10px;
+      color: #fff;
+      margin-top: 120px;
+    }
+
+    .david-content p {
+      margin-left: 60px;
+      color: #fff;
+    }
+
+    .david-content h3 {
+      margin-left: 60px;
+      color: #fff;
+    }
+
+    /* Form container */
+    .form-container {
+      max-width: 100%;
+      margin: 60px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Input fields */
+    .form-input {
+      width: 98%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* Submit button */
+    .form-submit {
+      text-decoration: none;
+      display: inline-block;
+      font-size: 30px;
+      width: 50%;
+      background-color: #2b1055;
+      color: #fff;
+      padding: 10px;
+      border: 2px solid #ccc;
+      margin-left: 230px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-submit:hover {
+      background-color: #5a3f84;
+      color: #fff;
+    }
+
+    .footer h3 {
+      color: white;
+      text-align: center;
+    }
+
+    .partners img {
+      border-radius: 10px;
+      width: 350px;
+      /* Adjust logo size */
+      margin: 0 15px;
+      /* Add spacing between logos */
+    }
+
+    hr {
+      width: 100%;
+      height: 1px;
+      background: #fff;
+
+    }
+
+    .links {
+      background-color: none;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sec {
+      flex: 1;
+      margin-right: 10px;
+    }
+
+    .sec h4 {
+      color: white;
+    }
+
+    .sec ul li {
+      color: white;
+      list-style: none;
+      background-color: none;
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer a {
+      color: white;
+      margin-right: 10px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .address {
+      font-size: 14px;
+      margin-top: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .reservation-item {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../Images/b2dfcb3b-6769-4420-b181-1df86daa8c1c__1_-removebg-preview.png" alt="Logo">
+    </div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="#" class="active">Reserve Vehicles</a></li>
+      <li><a href="Reviews.html">Rewiews</a></li>
+      <li><a href="Aboutus.html">About</a></li>
+      <li><a href="Contact.html">contact</a></li>
+      <li><a href="displayReserve.html">Display Reserve</a></li>
+    </ul>
+    <div class="select-container">
+      <select id="loginStatus">
+        <option value="">Accounts</option>
+        <option value="create">Create New</option>
+        <option value="logout">LogOut</option>
+      </select>
+    </div>
+  </header>
+  <div class="david-content">
+    <h2>Reserve Vehicles</h2>
+    <hr>
+    <br>
+    <p>Contrary to popular belief, Lorem Ipsum is not simply
+      random text. It has roots in a piece of classical Latin
+      literature from 45 BC, making it over 2000 years old.
+      Richard McClintock, a Latin professor at Hampden-Sydney
+      College in Virginia, looked up one of the more obscure
+      Latin words, consectetur, from a Lorem Ipsum passage,
+      and going through the cites of the word in classical
+      literature, discovered the undoubtable source. </p>
+    <br>
+    <h3>+97798********</h3>
+
+    <p>and Email at info@hamraboto.com.np</p>
+    <div class="form-container">
+      <form id="contact-form">
+        <label for="vehicleType">Select Vehicle Type*</label>
+        <select id="vehicleType" class="form-input" name="vehicleType">
+          <option value="">--Select--</option>
+          <option value="Holidayss Bus">Bus for Holidays</option>
+          <option value="Marriage Bus">Bus For Marriage</option>
+          <option value="Trip Bus">Bus For Travels</option>
+        </select>
+
+
+        <label for="preferredDate">Preferred Date:</label><br>
+        <input type="date" id="preferredDate" class="form-input" name="preferredDate">
+
+        <label for="fullName">Full Name*</label>
+        <input type="text" id="fullName" class="form-input" name="fullName" placeholder="Enter your full name" required>
+
+        <label for="email">Email Address*</label>
+        <input type="email" id="email" class="form-input" name="email" placeholder="Enter your email address" required>
+
+        <label for="contactNumber">Contact Number</label>
+        <input type="tel" id="contactNumber" class="form-input" name="contactNumber"
+          placeholder="Enter your contact number">
+
+        <label for="message">Message*</label>
+        <textarea id="message" class="form-input" name="message" rows="4" placeholder="Type your message here"
+          required></textarea>
+
+        <button id="submit" type="submit" class="form-submit">SUBMIT</button>
+      </form>
+    </div>
+    <footer>
+      <div class="footer">
+        <div class="partners">
+          <div class="line"></div>
+          <hr>
+          <h3>ASSOCIATED WITH</h3>
+          <br>
+          <img src="../Images/6df02b7c-6392-4ef7-9d35-6b15d88c767c.jpeg" alt="NIC ASIA">
+          <img src="../Images/Khalti_Digital_Wallet_Logo.png.jpg" alt="Khalti">
+          <img src="../Images/esewa_og.webp" alt="eSewa">
+          <hr>
+        </div>
+        <div class="links">
+          <div class="sec">
+            <h4>About Us</h4>
+            <ul>
+              <li>About</li>
+              <li>Review</li>
+              <li>Why Us</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+
+          <div class="sec">
+            <h4>Useful Links</h4>
+            <ul>
+              <li>Reserve Vehicle</li>
+              <li>Tour</li>
+            </ul>
+          </div>
+          <div class="sec">
+            <h4>Top Routes</h4>
+            <ul>
+              <li>Ithari - Kathmandu</li>
+              <li>Ithari - Biratnagar</li>
+            </ul>
+          </div>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <hr>
+        <p class="address">2024||www.hamraboto.com.np</p>
+    </footer>
+    <script src="../reserved.js"></script>
+
+    <script>
+
+      document.getElementById("loginStatus").addEventListener("change", function () {
+        var loginStatus = this.value;
+        if (loginStatus === "create") {
+          // Redirect to the sign-in page
+          window.location.href = "signin.html"; // Change "signin.html" to the actual URL of your sign-in page
+        } else if (loginStatus === "logout") {
+          // Redirect to the login page
+          window.location.href = "login.html"; // Change "login.html" to the actual URL of your login page
+        }
+      });
+
+      // Handle form submission
+      document.getElementById("loginStatus").addEventListener("change", function () {
+        var loginStatus = this.value;
+        if (loginStatus === "create") {
+          // Redirect to the sign-in page
+          window.location.href = "Register.html"; // Change "signin.html" to the actual URL of your sign-in page
+        } else if (loginStatus === "logout") {
+          // Redirect to the login page
+          window.location.href = "login.html"; // Change "login.html" to the actual URL of your login page
+        }
+      });
+    </script>
+</body>
+
+</html>
